@@ -1,0 +1,27 @@
+  159  sed -e '1p' passwd 
+  160  sed -n -e '1p' passwd 
+  161  sed -n -e '1,5p' passwd 
+  162  sed -n -e '1p' -e 5p passwd 
+  163  sed -n -e '/root/ p' passwd 
+  164  sed -n -e '/root/,3 p' passwd 
+  165  sed -n -e '/root/,/daemon/ p' passwd 
+  171  sed -n -e '/Jan 23/ p' messages 
+  172  sed -n -e '/Jan 23/,ntpd p' messages 
+  173  sed -n -e '/Jan 23/,/ntpd/ p' messages 
+  178  cat -n passwd  |sed -e '1 d'
+  179  cat -n passwd  |sed -e '1,2 d'
+  180  cat -n passwd  |sed -e '1,5 d'
+  181  cat -n passwd  |sed -e '/root/ d'
+  183  cat -n passwd  |sed -e '1 c sample line'
+  184  cat -n passwd  |sed -e '/root/ sample line'
+  185  cat -n passwd  |sed -e '/root/ c sample line'
+  186  cat -n passwd  |sed -e '/root/ a sample line'
+  187  cat -n passwd  |sed -e '/root/ i sample line'
+  188  cat -n passwd  |sed -e ' $ a  sample line'
+  189  cat -n passwd  |sed -e 's/root/ROOT/'
+  190  cat -n passwd  |sed -e 's/root/ROOT/g'
+  191  cat -n passwd  |sed -e 's/root/ROOT/g'
+  192  cat -n passwd  |sed -e 's/root/ROOT/2'
+  193  sed -i -e 's/root/ROOT/g' passwd 
+  195  man sed
+  208  history |grep sed >sed-commands
